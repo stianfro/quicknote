@@ -23,10 +23,9 @@ tags:
   - quicknote
 date: "%s"
 ---
-
 `, noteID, timeStamp.Format("2006-01-02"))
 
-	filePath := os.Getenv("HOME") + "/notes/quicknotes/" + noteID + ".yaml"
+	filePath := os.Getenv("HOME") + "/notes/quicknotes/" + noteID + ".md"
 
 	err := os.WriteFile(filePath, []byte(note), 0644)
 	if err != nil {
